@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Grievance Submission</title>
+    <!-- GOOGLE WEB FONT -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- BASE CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/menu.css" rel="stylesheet" />
+    <link href="css/animate.min.css" rel="stylesheet" />
+    <link href="css/icon_fonts/css/all_icons_min.css" rel="stylesheet" />
+    <link href="css/skins/square/grey.css" rel="stylesheet" />
+
+    <!-- YOUR CUSTOM CSS -->
+    <link href="css/custom.css" rel="stylesheet" />
+
+    <script src="js/modernizr.js"></script>
+    <!-- Modernizr -->
+  </head>
+
+  <body>
+    <div id="preloader">
+      <div data-loader="circle-side"></div>
+    </div>
+
+    <div id="loader_form">
+      <div data-loader="circle-side-2"></div>
+    </div>
+
+    <main>
+      <div id="form_container">
+        <div class="row">
+          <div class="col-lg-5">
+            <div id="left_form">
+              <figure><img src="img/registration_bg.svg" alt="" /></figure>
+              <h2>Grievance Form</h2>
+              <p>
+                Please provide your contact information, a clear description of
+                your grievance, and any relevant documentation to assist us in
+                understanding and resolving the issue efficiently.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-7">
+            <div id="wizard_container">
+              <div id="top-wizard">
+                <div id="progressbar"></div>
+              </div>
+              <!-- /top-wizard -->
+              <form name="example-1" id="wrapped" method="POST">
+                <input id="website" name="website" type="text" value="" />
+                <div id="middle-wizard">
+                  <div class="step">
+                    <h3 class="main_question">
+                      <strong>1/2</strong>Please fill with your details
+                    </h3>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            name="name"
+                            class="form-control required"
+                            placeholder="Name"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="text"
+                            name="phone"
+                            class="form-control"
+                            placeholder="Your Phone Number"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /row -->
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <input
+                            type="date"
+                            name="dob"
+                            class="form-control required"
+                            placeholder="Your Date Of Birth"
+                          />
+                        </div>
+                      </div>
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <div class="styled-select">
+                            <select class="required" name="city">
+                              <option value="" selected>
+                                Select your City
+                              </option>
+                              <option value="city1">city1</option>
+                              <option value="city2">city2</option>
+                              <option value="city3">city3</option>
+                              <option value="city4">city4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /row -->
+
+                    <div class="row">
+                      <div class="col-md-6">
+                        <div class="form-group">
+                          <div class="styled-select">
+                            <select class="required" name="node">
+                              <option value="" selected>
+                                Select your Node
+                              </option>
+                              <option value="node1">node1</option>
+                              <option value="node2">node2</option>
+                              <option value="node3">node3</option>
+                              <option value="node4">node4</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- /row -->
+                  </div>
+                  <!-- /step-->
+
+                  <div class="submit step">
+                    <h3 class="main_question">
+                      <strong>2/2</strong>Complaint Details
+                    </h3>
+                    <div class="form-group">
+                      Add Ideas / Suggestion / Complaint
+                      <textarea
+                        name="additional_message"
+                        class="form-control"
+                        style="height: 100px"
+                        placeholder="Add your description here"
+                      ></textarea>
+                    </div>
+                    <div class="form-group">
+                      Upload Related Photos / Videos
+
+                      <input
+                        class="form-control"
+                        type="file"
+                        id="img"
+                        name="img"
+                        accept="image/*"
+                      />
+                    </div>
+                    <div class="form-group terms">
+                      <input
+                        name="terms"
+                        type="checkbox"
+                        class="icheck required"
+                        value="yes"
+                      />
+                      <label
+                        >Please accept
+                        <a
+                          href="#"
+                          data-bs-toggle="modal"
+                          data-bs-target="#terms-txt"
+                          >terms and conditions</a
+                        >
+                        ?</label
+                      >
+                    </div>
+                  </div>
+                  <!-- /step-->
+                </div>
+                <!-- /middle-wizard -->
+                <div id="bottom-wizard">
+                  <button type="button" name="backward" class="backward">
+                    Backward
+                  </button>
+                  <button type="button" name="forward" class="forward">
+                    Forward
+                  </button>
+                  <button type="submit" name="process" class="submit">
+                    Submit
+                  </button>
+                </div>
+                <!-- /bottom-wizard -->
+              </form>
+            </div>
+            <!-- /Wizard container -->
+          </div>
+        </div>
+        <!-- /Row -->
+      </div>
+      <!-- /Form_container -->
+    </main>
+
+    <!-- Modal terms -->
+    <div
+      class="modal fade"
+      id="terms-txt"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="termsLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" id="termsLabel">Terms and conditions</h4>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn_1" data-bs-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- SCRIPTS -->
+    <!-- Jquery-->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <!-- Common script -->
+    <script src="js/common_scripts_min.js"></script>
+    <!-- Wizard script -->
+    <script src="js/registration_wizard_func.js"></script>
+    <!-- Menu script -->
+    <script src="js/velocity.min.js"></script>
+    <script src="js/main.js"></script>
+    <!-- Theme script -->
+    <script src="js/functions.js"></script>
+  </body>
+</html>
